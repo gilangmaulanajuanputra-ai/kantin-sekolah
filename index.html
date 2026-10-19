@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasir Kantin Sekolah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h2>KASIR KANTIN SEKOLAH</h2>
+            <p>Selamat datang di Kantin Sekolah</p>
+        </header>
+
+        
+        <div class="form-group">
+            <label>Nama Pelanggan:</label>
+            <input type="text" id="namaPelanggan" placeholder="Masukkan nama">
+        </div>
+
+        
+        <h3>Daftar Menu</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Menu</th>
+                    <th>Harga</th>
+                    <th>Jumlah</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Nasi Goreng</td>
+                    <td>Rp15.000</td>
+                    <td><input type="number" id="qty-1" value="0" min="0"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mie Goreng</td>
+                    <td>Rp12.000</td>
+                    <td><input type="number" id="qty-2" value="0" min="0"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ayam Geprek</td>
+                    <td>Rp18.000</td>
+                    <td><input type="number" id="qty-3" value="0" min="0"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Es Teh</td>
+                    <td>Rp5.000</td>
+                    <td><input type="number" id="qty-4" value="0" min="0"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Air Mineral</td>
+                    <td>Rp4.000</td>
+                    <td><input type="number" id="qty-5" value="0" min="0"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        
+        <div class="form-group" style="margin-top: 15px;">
+            <label>Uang Pembayaran (Rp):</label>
+            <input type="number" id="uangBayar" placeholder="Masukkan jumlah uang">
+        </div>
+        
+        <button onclick="hitungTotal()">HITUNG TOTAL</button>
+
+        <div id="hasil" style="display: none; margin-top: 20px;">
+            <h3>Hasil Perhitungan</h3>
+            <p>Subtotal: <span id="resSubtotal">Rp0</span></p>
+            <p>Diskon: <span id="resDiskon">Rp0</span></p>
+            <p><strong>Total Pembayaran: <span id="resTotal">Rp0</span></strong></p>
+            <p>Uang Bayar: <span id="resUang">Rp0</span></p>
+            <p>Kembalian: <span id="resKembali">Rp0</span></p>
+            <p id="pesanError" style="color: red; font-weight: bold;"></p>
+
+            <div id="strukBox" style="display: none; margin-top: 15px; background: #fff; padding: 10px; border: 1px solid #ccc;">
+                <pre id="strukText"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
